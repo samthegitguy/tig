@@ -1,0 +1,31 @@
+{
+  "name": "@123npmmaster/tig",
+  "version": "0.1.0",
+  "description": "Simplest version control",
+  "main": "bin/app.js",
+  "bin": {
+    "tig": "bin/app.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run rebuild && npm run shebang && npm run link && npm run run",
+    "rebuild": "npx tsc src/*.ts --outdir bin",
+    "link": "sudo npm link",
+    "run": "tig",
+    "shebang": "(echo '#! /usr/bin/env node' && cat bin/app.js) > filename1 && mv filename1 bin/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/samthegitguy/tig"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.11.10",
+    "tsc": "^1.20150623.0"
+  },
+  "dependencies": {
+    "logjs": "^0.1.5",
+    "shelljs": "^0.8.4"
+  }
+}
