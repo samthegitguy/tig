@@ -1,1 +1,1 @@
-Javascript version control system. Simple as  ****
+Javascript version control system. Simple AF
