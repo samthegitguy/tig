@@ -1,0 +1,1 @@
+ tsc src/*.ts --outdir bin && (echo '#! /usr/bin/env node' && cat bin/app.js) > Cachefile && mv Cachefile bin/app.js && node bin/app.js
