@@ -1,7 +1,16 @@
-function hello(var1, var2, callback) {
-    callback(var1, var2 + 8);
+let snap = function() {
+    console.log("HO");
 }
-hello(1, 3, function(add, add2) {
-    let total = add + add2;
-    console.log(total);
-})
+let down = function() {
+
+}
+let up = function() {
+
+}
+let ver = function() {
+    
+}
+exports.snap = snap;
+exports.down = down;
+exports.up = up;
+exports.ver = ver;
