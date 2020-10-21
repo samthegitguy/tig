@@ -11,7 +11,7 @@
             
             // any stream transport
             logger.transports.add(new logjs.transports.stream({
-                stream: fs.createWriteStream('./logs/' + Date.now(), {
+                stream: fs.createWriteStream('./.tig/logs/' + Date.now(), {
                     'flags': 'a',
                 })
             }));
