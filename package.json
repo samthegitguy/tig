@@ -5,9 +5,14 @@
   "bin": {
     "tig": "bin/app.js"
   },
+  "main": "bin/module.js",
   "repository": {
     "type": "git",
     "url": "github.com/samthegitguy/tig"
+  },
+  "scripts": {
+    "start": "npx tsc src/module.ts --outdir bin && node bin/module.js && npx tsc src/app.ts --outdir bin && node bin/app.js && (echo '#! /usr/bin/env node' && cat bin/app.js) >> Cachefile && mv Cachefile bin/app.js",
+    "winstart": "npx tsc src/module.ts --outdir bin && node bin/module.js && npx tsc src/app.ts --outdir bin && node bin/app.js && (echo #! /usr/bin/env node && cd bin && type app.js  && cd ..) >> Cachefile && move Cachefile bin/app.js"
   },
   "author": "",
   "license": "MIT",
