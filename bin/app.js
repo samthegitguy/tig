@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#! /usr/bin/env node 
 { // Setup
     var fs = require('fs');
     { // Logjs setup
@@ -11,7 +11,7 @@
             }));
             // any stream transport
             logger.transports.add(new logjs.transports.stream({
-                stream: fs.createWriteStream('./logs/' + Date.now(), {
+                stream: fs.createWriteStream('./.tig/logs/' + Date.now(), {
                     'flags': 'a'
                 })
             }));
@@ -19,5 +19,6 @@
     }
 }
 { // Main
-    console.log(hi);
+    switch (process.argv[1]) {
+    }
 }
