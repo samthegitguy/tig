@@ -16,13 +16,13 @@
     "winstart": "npx tsc src/module.ts --outdir bin && node bin/module.js && npx tsc src/app.ts --outdir bin && node bin/app.js && (echo #! /usr/bin/env node && cd bin && type app.js  && cd ..) >> Cachefile && move Cachefile bin/app.js"
   },
   "author": "",
-  "license": "MIT",
   "devDependencies": {
     "@types/node": "^14.11.10",
     "tsc": "^1.20150623.0"
   },
   "dependencies": {
     "logjs": "^0.1.5",
+    "ncp": "^2.0.0",
     "shelljs": "^0.8.4"
   }
 }
