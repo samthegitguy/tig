@@ -5,6 +5,7 @@
   "bin": {
     "tig": "bin/app.js"
   },
+  "license": "MIT",
   "main": "bin/module.js",
   "repository": {
     "type": "git",
